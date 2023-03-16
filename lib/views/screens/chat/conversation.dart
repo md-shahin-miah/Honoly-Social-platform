@@ -21,7 +21,7 @@ class _ConversationState extends State<Conversation> {
       appBar: AppBar(
         elevation: 3,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.keyboard_backspace,
           ),
           onPressed: () => Navigator.pop(context),
@@ -44,13 +44,13 @@ class _ConversationState extends State<Conversation> {
                   children: <Widget>[
                     Text(
                       name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 14,
                       ),
                     ),
-                    SizedBox(height: 5),
-                    Text(
+                    const SizedBox(height: 5),
+                    const Text(
                       "Online",
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
@@ -106,7 +106,7 @@ class _ConversationState extends State<Conversation> {
                 elevation: 10,
                 color: Theme.of(context).primaryColor,
                 child: Container(
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     maxHeight: 100,
                   ),
                   child: Row(

@@ -7,9 +7,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:honoly_restaurant/app.dart';
+import 'package:honoly_chat/app.dart';
 
-import 'package:honoly_restaurant/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

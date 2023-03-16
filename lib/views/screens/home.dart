@@ -13,11 +13,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Feeds"),
+
+        title: const Text("Feeds"),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.filter_list,
             ),
             onPressed: () {},
@@ -25,7 +26,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: ListView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         itemCount: posts.length,
         itemBuilder: (BuildContext context, int index) {
           Map post = posts[index];
@@ -38,7 +39,7 @@ class _HomeState extends State<Home> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(
+        child: const Icon(
           Icons.add,
           color: Colors.white,
         ),

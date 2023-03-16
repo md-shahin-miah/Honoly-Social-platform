@@ -24,14 +24,15 @@ class _ChatsState extends State<Chats>
     super.build(context);
     return Scaffold(
       appBar: AppBar(
-        title: TextField(
+
+        title: const TextField(
           decoration: InputDecoration.collapsed(
             hintText: 'Search',
           ),
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.filter_list,
             ),
             onPressed: () {},
@@ -39,11 +40,11 @@ class _ChatsState extends State<Chats>
         ],
         bottom: TabBar(
           controller: _tabController,
-          indicatorColor: Theme.of(context).accentColor,
-          labelColor: Theme.of(context).accentColor,
-          unselectedLabelColor: Theme.of(context).textTheme.caption!.color,
+          indicatorColor: Colors.white,
+          labelColor: Colors.white,
+          unselectedLabelColor: Colors.black54,
           isScrollable: false,
-          tabs: <Widget>[
+          tabs: const <Widget>[
             Tab(
               text: "Message",
             ),
@@ -82,7 +83,7 @@ class _ChatsState extends State<Chats>
             },
           ),
           ListView.separated(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             separatorBuilder: (BuildContext context, int index) {
               return Align(
                 alignment: Alignment.centerRight,
@@ -109,7 +110,7 @@ class _ChatsState extends State<Chats>
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(
+        child: const Icon(
           Icons.add,
           color: Colors.white,
         ),

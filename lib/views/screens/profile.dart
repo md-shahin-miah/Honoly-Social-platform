@@ -17,14 +17,14 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Container(
           width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 60),
+              const SizedBox(height: 60),
               CircleAvatar(
                 backgroundImage: AssetImage(
                   "assets/images/cm${random.nextInt(10)}.jpg",
@@ -34,42 +34,42 @@ class _ProfileState extends State<Profile> {
               SizedBox(height: 10),
               Text(
                 names[random.nextInt(10)],
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
                 ),
               ),
-              SizedBox(height: 3),
-              Text(
+              const SizedBox(height: 3),
+              const Text(
                 "Status should be here",
                 style: TextStyle(),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   TextButton(
-                    child: Icon(
+                    style: TextButton.styleFrom(backgroundColor:  Colors.grey),
+                    onPressed: () {},
+                    child: const Icon(
                       Icons.message,
                       color: Colors.white,
                     ),
-                    style: TextButton.styleFrom(backgroundColor:  Colors.grey),
-                    onPressed: () {},
                   ),
                   SizedBox(width: 10),
                   TextButton(
-                    child: Icon(
+                    style: TextButton.styleFrom(backgroundColor:  Theme.of(context).accentColor),
+                    onPressed: () {},
+                    child: const Icon(
                       Icons.add,
                       color: Colors.white,
                     ),
-                    style: TextButton.styleFrom(backgroundColor:  Theme.of(context).accentColor),
-                    onPressed: () {},
                   ),
                 ],
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50),
+                padding: const EdgeInsets.symmetric(horizontal: 50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -92,7 +92,7 @@ class _ProfileState extends State<Profile> {
                 ),
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
-                    padding: EdgeInsets.all(5.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: Image.asset(
                       "assets/images/cm${random.nextInt(10)}.jpg",
                       fit: BoxFit.cover,
@@ -111,8 +111,8 @@ class _ProfileState extends State<Profile> {
     return Column(
       children: <Widget>[
         Text(
-          random.nextInt(10000).toString(),
-          style: TextStyle(
+          random.nextInt(20000).toString(),
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,
           ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:honoly_restaurant/util/extensions.dart';
-import 'package:honoly_restaurant/util/validations.dart';
-import 'package:honoly_restaurant/views/widgets/custom_button.dart';
+import 'package:honoly_chat/util/extensions.dart';
+
 import 'package:lottie/lottie.dart';
 
 
@@ -10,6 +9,8 @@ import '../../../util/const.dart';
 import '../../../util/enum.dart';
 import '../../../util/router.dart';
 
+import '../../../util/validations.dart';
+import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
 import '../main_screen.dart';
 class Login extends StatefulWidget {
@@ -22,22 +23,23 @@ class _LoginState extends State<Login> {
   bool validate = false;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  late String email, password, name = '';
+  late String email='shahin@gmail.com', password='shahin250', name = 'shahin miah';
   FocusNode nameFN = FocusNode();
   FocusNode emailFN = FocusNode();
   FocusNode passFN = FocusNode();
   FormMode formMode = FormMode.LOGIN;
 
   login() async {
-    FormState? form = formKey.currentState;
-    form!.save();
-    if (!form.validate()) {
-      validate = true;
-      setState(() {});
-      showInSnackBar('Please fix the errors in red before submitting.');
-    } else {
-      Navigate.pushPageReplacement(context, MainScreen());
-    }
+    Navigate.pushPageReplacement(context, MainScreen());
+    // FormState? form = formKey.currentState;
+    // form!.save();
+    // if (!form.validate()) {
+    //   validate = true;
+    //   setState(() {});
+    //   showInSnackBar('Please fix the errors in red before submitting.');
+    // } else {
+    //   Navigate.pushPageReplacement(context, MainScreen());
+    // }
   }
 
   void showInSnackBar(String value) {
@@ -48,25 +50,33 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      key: _scaffoldKey,
-      body: Container(
-        child: Row(
-          children: [
-            buildLottieContainer(),
-            Expanded(
-              child: AnimatedContainer(
-                duration: Duration(milliseconds: 500),
-                child: Center(
-                  child: Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: screenWidth * 0.1),
-                    child: buildFormContainer(),
+    return SafeArea(
+      child: Scaffold(
+        key: _scaffoldKey,
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 38.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+
+              children: [
+                buildLottieContainer(),
+                Expanded(
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: 500),
+                    child: Center(
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: screenWidth * 0.1),
+                        child: buildFormContainer(),
+                      ),
+                    ),
                   ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -201,7 +211,7 @@ class _LoginState extends State<Login> {
           visible: formMode != FormMode.FORGOT_PASSWORD,
           child: Column(
             children: [
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               CustomTextField(
                 enabled: !loading,
                 hintText: "Password",

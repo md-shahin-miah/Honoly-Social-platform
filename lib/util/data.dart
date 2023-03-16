@@ -2,31 +2,32 @@ import 'dart:math';
 
 Random random = Random();
 List names = [
-  "Ling Waldner",
-  "Gricelda Barrera",
-  "Lenard Milton",
-  "Bryant Marley",
-  "Rosalva Sadberry",
-  "Guadalupe Ratledge",
-  "Brandy Gazda",
-  "Kurt Toms",
-  "Rosario Gathright",
-  "Kim Delph",
-  "Stacy Christensen",
+  "Shahin Miah",
+  "Farha Barrera",
+  "Turks Milton",
+  "bruns Marley",
+  "Rosalva disc",
+  "Guvus Ratledge",
+  "grainy Gazda",
+  "Mart Tomas",
+  "Rokario Catios",
+  "Jon Fiph",
+  "Mil hueery",
 ];
 
 List messages = [
-  "Hey, how are you doing?",
-  "Are you available tomorrow?",
-  "It's late. Go to bed!",
-  "This cracked me up 😂😂",
   "Flutter Rocks!!!",
   "The last rocket🚀",
-  "Griezmann signed for Barca❤️❤️",
+  "Shahin signed for Flutter❤️❤️",
   "Will you be attending the meetup tomorrow?",
   "Are you angry at something?",
   "Let's make a UI serie.",
   "Can i hear your voice?",
+  "Hey, how are you doing?",
+  "Are you available tomorrow?",
+  "It's late. Go to bed!",
+  "This cracked me up 😂😂",
+
 ];
 
 List notifs = [

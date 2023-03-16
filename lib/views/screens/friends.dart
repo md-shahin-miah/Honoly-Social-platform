@@ -19,7 +19,7 @@ class _FriendsState extends State<Friends> {
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.filter_list,
             ),
             onPressed: () {},
@@ -27,14 +27,14 @@ class _FriendsState extends State<Friends> {
         ],
       ),
       body: ListView.separated(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         separatorBuilder: (BuildContext context, int index) {
           return Align(
             alignment: Alignment.centerRight,
             child: Container(
               height: 0.5,
               width: MediaQuery.of(context).size.width / 1.3,
-              child: Divider(),
+              child: const Divider(),
             ),
           );
         },

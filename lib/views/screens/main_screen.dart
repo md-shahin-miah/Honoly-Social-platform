@@ -21,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
         children: <Widget>[
@@ -45,19 +45,19 @@ class _MainScreenState extends State<MainScreen> {
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(
                 Icons.message,
               ),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(
                 Icons.group,
               ),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
               ),
@@ -67,7 +67,7 @@ class _MainScreenState extends State<MainScreen> {
               icon: IconBadge(icon: Icons.notifications),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: '',
             ),

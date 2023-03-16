@@ -1,3 +1,3 @@
 class Constants {
-  static String appName = 'HURRY  App';
+  static String appName = 'HURRY  UP';
 }
